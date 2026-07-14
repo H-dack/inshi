@@ -1,0 +1,107 @@
+</html><!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>一問一答</title>
+
+  <style>
+
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: #111;
+      color: white;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      height: 100vh;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    button,
+    input {
+
+      width: 100%;
+
+      padding: 15px;
+
+      margin-top: 10px;
+
+      border: none;
+      border-radius: 10px;
+
+      font-size: 1rem;
+
+      box-sizing: border-box;
+    }
+
+    #quiz {
+      font-size: 2rem;
+      margin: 30px 0;
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- メニュー -->
+  <div id="menu" class="container">
+
+    <h1>一問一答</h1>
+
+    <button onclick="startWordQuiz()">
+      単語問題
+    </button>
+
+    <button onclick="startPartQuiz()">
+      4択問題
+    </button>
+
+  </div>
+
+  <!-- クイズ -->
+  <div
+    id="quizArea"
+    class="container"
+    style="display:none;"
+  >
+
+    <div id="quiz"></div>
+
+    <input
+      id="answer"
+      placeholder="意味"
+    >
+
+    <div id="choices"></div>
+
+    <button id="answerButton" onclick="check()">
+      回答
+    </button>
+
+    <p id="result"></p>
+
+    <p id="progress"></p>
+
+    <div id="end"></div>
+
+  </div>
+
+  <script src="app.js"></script>
+
+</body>
+
+</html>
