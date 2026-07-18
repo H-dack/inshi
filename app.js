@@ -75,7 +75,7 @@ let remainingIndexes = [];
 
 /* ---------------- */
 function startWordQuiz() {
-
+  console.log(wordQuestions.length);
   mode = "word";
 
   startQuiz(wordQuestions);
